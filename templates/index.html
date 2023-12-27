@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do App</title>
+</head>
+<body>
+    <h1>Enter List Details</h1>
+    <form method="post" action="{{ url_for('add') }}">
+        <label for="new_item">List Name:</label>
+        <input type="text" id="new_item" name="new_item" maxlength="25" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>List of records:</h2>
+    <ul>
+        {% for item in to_do_list %}
+            <li>
+                {{ item.content }}
+                <a href="{{ url_for('delete', item_id=item.id) }}" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
