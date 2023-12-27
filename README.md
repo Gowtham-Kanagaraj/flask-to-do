@@ -1,4 +1,4 @@
-# Your Flask To-Do Application
+# Flask To-Do Application
 
 This is a simple Flask to-do application with SQLite database integration.
 
@@ -41,6 +41,6 @@ This is a simple Flask to-do application with SQLite database integration.
 ## Usage
 
 - Open the application in your web browser.
-- Add new to-do items with the "Add" button.
+- Add new to-do items with the "Submit" button.
 - Delete to-do items using the "Delete" links.
 
